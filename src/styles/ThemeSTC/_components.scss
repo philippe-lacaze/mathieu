@@ -1,0 +1,71 @@
+$label-width: 20em;
+
+
+.form-action-panel, .action-panel {
+  display: block;
+  margin: 0 auto;
+  padding: 0.5em;
+  border: 1px solid gray;
+}
+
+.form-field {
+  label {
+    display: inline-block;
+    width: $label-width;
+  }
+
+  ul {
+    margin: 0 0 0 $label-width;
+    padding: 1px;
+    list-style: none;
+    display: none;
+  }
+
+  [name].ng-invalid ~ ul {
+    margin-bottom: 0.3em;
+    display: block;
+  }
+}
+
+.action-bar {
+  div {
+    display: flex;
+    margin: 1em 0;
+    justify-content: space-evenly;
+  }
+}
+
+.modal-content {
+  background-color: $white;
+
+  .modal-close-decorator::after {
+    content: 'X';
+  }
+}
+
+.state-bar {
+  ul li {
+    display: inline;
+    .state-bar-label {
+      display: inline;
+    }
+
+    &.actionable {
+      cursor: pointer;
+    }
+
+    &.current {
+      background-color: $light-aqua;
+    }
+
+    + li::before {
+      content: '|'
+    }
+  }
+}
+
+body {
+  width: 80%;
+  display: block;
+  margin: 1em auto;
+}

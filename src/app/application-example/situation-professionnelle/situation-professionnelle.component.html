@@ -1,0 +1,15 @@
+
+<zia-action-panel [actionBarConfig]="actionBarConfig"
+                  (action)="onAction($event)">
+
+  <h2>Situations professionnelles :</h2>
+
+  <div *ngFor="let activite of activites" class="activite" (click)="onModifierActivite(activite)" title="modifier activité">
+    <a *ngIf="activite.dateFin" >{{activite.libelleActivite}} depuis {{activite.dateDebut}} jusqu'au {{activite.dateFin}}</a>
+    <a *ngIf="!activite.dateFin" >{{activite.libelleActivite}} depuis {{activite.dateDebut}}</a>
+    <button title="supprimer activité"(click)="onSupprimerActivite(activite)" class="supprimer-btn">x</button>
+  </div>
+
+  <button (click)="onAjouterActivite()" class="ajouter-btn">Ajouter une situation</button>
+
+</zia-action-panel>

@@ -1,0 +1,23 @@
+<zia-form-action-panel *ngIf="situationPersonnelle"
+                       [formGroups]="form1.form"
+                       [actionBarConfig]="actionBarConfig"
+                       (formActionEvent)="onFormActionEvent($event)"
+
+>
+
+  <form #form1="ngForm">
+    <zia-form-field>
+      <label for="prenom" ziaWording></label>
+      <input type="text" id="prenom" name="prenom" [(ngModel)]="situationPersonnelle.personne.prenom" required minlength="2"/>
+    </zia-form-field>
+    <zia-form-field>
+      <label for="nom" ziaWording></label>
+      <input type="text" id="prenom" name="nom" [(ngModel)]="situationPersonnelle.personne.nom" required minlength="2"/>
+    </zia-form-field>
+    <zia-form-field>
+      <label for="dateNaissance" ziaWording></label>
+      <input type="text" id="dateNaissance" name="dateNaissance" [(ngModel)]="situationPersonnelle.personne.dateNaissance" required ziaDate/>
+    </zia-form-field>
+  </form>
+
+</zia-form-action-panel>

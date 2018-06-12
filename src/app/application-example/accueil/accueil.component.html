@@ -1,0 +1,64 @@
+<zia-action-panel [actionBarConfig]="actionBarConfig"
+                  (action)="onAction($event)">
+
+  <h1>
+    Bienvenue sur l'application example
+  </h1>
+
+  <p>
+    Example d'application de type extranet régional composée :
+  </p>
+  <ul>
+    <li>une page routée "accueil"</li>
+    <li>une page routée "etapes", avec les étapes non routées suivantes :
+      <ul>
+        <li>Situation personnelle</li>
+        <li>Situation professionnelle</li>
+        <li>Situation familiale</li>
+      </ul>
+    </li>
+
+    <li>une page routée "récapitulatif"</li>
+  </ul>
+
+  <p>
+    Cette <b>application example</b> illustre l'utilisation de plusieurs composants du socle technique RIA que l'on peut
+    rencontrer dans
+    des applications de type <b>extranet régional</b> :
+  </p>
+
+  <ul>
+    <li>Utilisation de la librairie <b>zia-core</b> pour la communication avec l'exposition REST</li>
+    <li>Utilisation de la librairie <b>zia-wording</b> pour le wording des labels et messages d'erreur</li>
+    <li>Utilisation de la librairie <b>zia-bandeau-extranet</b> d'intégration du bandeau du portail extranet</li>
+    <li>Utilisation de plusieurs composants de zia-composants
+      <ul>
+        <li>Utilisation de zia-field pour la prise en charge automatique et accessible des messages de validation</li>
+        <li>Utilisation des composant zia-action-panel et zia-form-action-panel pour les panels avec barre de bouton
+          d'action de navigation applicative
+        </li>
+        <li>Utilisation des fenêtre modale grâce à zia-modal</li>
+        <li>Utilisation des composants de gestion état-transition
+          <ul>
+            <li>Pour la gestion déclarative de la navigation couplée au routage (c.a.d. les "pages" routées, c.a.d.
+              bookmarkable)
+            </li>
+            <li>Pour l'affichage de la <b>barre d'étape</b> traditionnelle d'un TLS extranet (1 étape = 1 page non
+              routée)
+            </li>
+            <li>Pour l'implémentation automatique de la problématique de gestion de la navigation suivant-précédent
+              entre pages routées et étapes (par exemple le fait que 'suivant' sur la dernière étape entraine le passage
+              à la page routée suivante
+            </li>
+          </ul>
+        </li>
+
+      </ul>
+    </li>
+
+  </ul>
+
+  <p><em>Attention : Le style appliqué à cette application d'example du socle RIA est un style simple, n'obéissant a aucune charte standard. En effet l'implémentation des chartes graphiques en vigueur étant du
+  domaine de responsabilité de chaque application, le socle RIA ne porte en lui-même aucune implémenation de charte</em></p>
+
+</zia-action-panel>

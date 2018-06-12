@@ -1,0 +1,24 @@
+<h2>Saisie d'une activité</h2>
+
+<zia-form-action-panel *ngIf="activite"
+                       [formGroups]="form1.form"
+                       [actionBarConfig]="actionBarConfig"
+                       (formActionEvent)="onFormActionEvent($event)">
+
+  <form #form1="ngForm" novalidate>
+    <zia-form-field>
+      <label for="libelleActivite" ziaWording></label>
+      <input type="text" id="libelleActivite" name="libelleActivite" [(ngModel)]="activite.libelleActivite" required minlength="2"/>
+    </zia-form-field>
+    <zia-form-field>
+      <label for="dateDebut" ziaWording></label>
+      <input type="text" id="dateDebut" name="dateDebut" [(ngModel)]="activite.dateDebut" required ziaDate/>
+    </zia-form-field>
+    <zia-form-field>
+      <label for="dateFin" ziaWording></label>
+      <input type="text" id="dateFin" name="dateFin" [(ngModel)]="activite.dateFin" ziaDate/>
+    </zia-form-field>
+  </form>
+
+</zia-form-action-panel>
+

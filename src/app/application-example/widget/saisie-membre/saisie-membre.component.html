@@ -1,0 +1,31 @@
+<h2>Saisie d'un membre de la famille</h2>
+
+<zia-form-action-panel *ngIf="membre?.personne"
+                       [formGroups]="form1.form"
+                       [actionBarConfig]="actionBarConfig"
+                       (formActionEvent)="onFormActionEvent($event)">
+
+  <form #form1="ngForm" novalidate>
+    <zia-form-field>
+      <label for="statut" ziaWording></label>
+      <input type="text" id="statut" name="statut" [(ngModel)]="membre.statut" required minlength="2"/>
+    </zia-form-field>
+    <zia-form-field>
+      <label for="prenom" ziaWording></label>
+      <input type="text" id="prenom" name="prenom" [(ngModel)]="membre.personne.prenom" required minlength="2"/>
+    </zia-form-field>
+    <zia-form-field>
+      <label for="nom" ziaWording></label>
+      <input type="text" id="nom" name="nom" [(ngModel)]="membre?.personne.nom" required minlength="2" />
+    </zia-form-field>
+    <zia-form-field>
+      <label for="dateNaissance" ziaWording></label>
+      <input type="text" id="dateNaissance" name="dateNaissance" [(ngModel)]="membre?.personne.dateNaissance" required ziaDate/>
+    </zia-form-field>
+    <zia-form-field>
+      <label for="sexe" ziaWording></label>
+      <input type="text" id="sexe" name="sexe" [(ngModel)]="membre?.personne.sexe" minlength="7"/>
+    </zia-form-field>
+  </form>
+
+</zia-form-action-panel>

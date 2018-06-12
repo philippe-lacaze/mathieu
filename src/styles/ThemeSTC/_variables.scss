@@ -1,0 +1,143 @@
+//== Colors
+// ---- No colors
+$black:                       black !default;                       // #000 or rgb(0, 0, 0)
+$white:                       white !default;                       // #fff or rgb(255, 255, 255)
+
+// ---- Shades of grey
+$grey:                        grey !default;                        // #808080, rgb(128, 128, 128) or gray
+
+// ------ Dark greys
+$dark-grey:                   lighten($black, 13.5%) !default;      // #222 or rgb(34, 34, 34)
+$darker-grey:                 lighten($black, 20%) !default;        // #333 or rgb(51, 51, 51)
+$darkest-grey:                lighten($black, 33.5%) !default;      // #555 or rgb(85, 85, 85)
+
+$mole-grey:                   #464646 !default;                     // rgb(70, 70, 70)
+
+// ------ Light greys
+$light-grey:                  lighten($black, 46.7%) !default;      // #777 or rgb(119, 119, 119)
+$lighter-grey:                lighten($black, 60%) !default;        // #999 or rgb(153, 153, 153)
+$lightest-grey:               lighten($black, 73.2%) !default;      // #bbb or rgb(187, 187, 187)
+
+$off-white:                   #ddd !default;                        // rgb(221, 221, 221)
+
+// ---- RGB colors
+$red:                         red !default;                         // #ff0000 or rgb(255, 0, 0)
+$dark-red:                    darken($red, 10%) !default;           // #cc0000 or rgb(204, 0, 0)
+$light-red:                   lighten($red, 10%) !default;          // #ff3333 or rgb(255, 51, 51)
+
+$green:                       green !default;                       // #008000 or rgb(0, 128, 0)
+$dark-green:                  darken($green, 10%) !default;         // #004d00 or rgb(0, 77, 0)
+$light-green:                 lighten($green, 10%) !default;        // #00b300 or rgb(0, 179, 0)
+
+$blue:                        blue !default;                        // #0000ff or rgb(0, 0, 255)
+$dark-blue:                   darken($blue, 10%) !default;          // #0000cc or rgb(0, 0, 204)
+$light-blue:                  lighten($blue, 10%) !default;         // #3333ff or rgb(51, 51, 255)
+
+// ---- Basic colors
+$yellow:                      yellow !default;                      // #ffff00 or rgb(255, 255, 0)
+$dark-yellow:                 darken($yellow, 10%) !default;        // #cccc00 or rgb(204, 204, 0)
+$light-yellow:                lighten($yellow, 10%) !default;       // #ffff33 or rgb(255, 255, 51)
+
+$aqua:                        aqua !default;                        // #00ffff or rgb(0, 255, 255)
+$dark-aqua:                   darken($aqua, 10%) !default;          // #00cccc or rgb(0, 204, 204)
+$light-aqua:                  lighten($aqua, 10%) !default;         // #33ffff or rgb(51, 255, 255)
+
+$fuchsia:                     fuchsia !default;                     // #ff00ff or rgb(255, 0, 255)
+$dark-fuchsia:                darken($fuchsia, 10%) !default;       // #cc00cc or rgb(204, 0, 204)
+$light-fuchsia:               lighten($fuchsia, 10%) !default;      // #ff33ff or rgb(255, 51, 255)
+
+// ---- Agora colors
+$agora-blue:                  #0673be !default;                     // #0673be or rgb(6, 115, 190)
+$dark-agora-blue:             darken($agora-blue, 10%) !default;    // #04558d or rgb(4, 85, 141)
+$light-agora-blue:            lighten($agora-blue, 10%) !default;   // #0891ef or rgb(8, 145, 239)
+
+$agora-red:                   #e00610 !default;                     // #e00610 or rgb(224, 6, 16)
+$dark-agora-red:              darken($agora-red, 10%) !default;     // #ae050c or rgb(174, 5, 12)
+$light-agora-red:             lighten($agora-red, 10%) !default;    // #f9202a or rgb(249, 32, 42)
+
+$olive:                       #bad50c !default;                     // #808000 or rgb(186, 213, 12)
+$dark-olive:                  darken($olive, 10%) !default;         // #90a509 or rgb(144, 165, 9)
+$light-olive:                 lighten($olive, 10%) !default;        // #d6f321 or rgb(214, 243, 33)
+
+//== Scaffolding
+//** Background color for `<body>`.
+$body-bg:                     $white !default;
+//** Global text color on `<body>`.
+$text-color:                  $darkest-grey !default;
+
+//** Global textual link color.
+$link-color:                  $agora-blue !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:            darken($link-color, 10%) !default;
+//** Link hover decoration.
+$link-hover-decoration:       none !default;
+
+//== Typography
+$font-family-sans-serif:      Helvetica, Arial, sans-serif !default;
+$font-family-serif:           Georgia, "Times New Roman", Times, serif !default;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace:       Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:            $font-family-sans-serif !default;
+
+$font-size-base:              62.5% !default;
+$font-size-large:             2.0rem !default; // 20px
+$font-size-small:             1.2rem !default; // 12px
+
+$font-size-h1:                3.6rem !default; // 36px
+$font-size-h2:                3.0rem !default; // 30px
+$font-size-h3:                2.4rem !default; // 24px
+$font-size-h4:                1.8rem !default; // 18px
+$font-size-h5:                1.4rem !default; // 14px
+$font-size-h6:                1.2rem !default; // 12px
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base:            1.428571429 !default; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed:        floor((16 * $line-height-base)) !default; // 16 it's the font-size by default
+
+//** By default, this inherits from the `<body>`.
+$headings-font-family:        "Volkhov", "Times New Roman", Times, serif !default;
+$headings-font-weight:        400 !default;
+$headings-line-height:        1.1 !default;
+$headings-color:              $black !default;
+
+//== Components
+$padding-base-vertical:       6px !default;
+$padding-base-horizontal:     12px !default;
+
+$padding-large-vertical:      10px !default;
+$padding-large-horizontal:    16px !default;
+
+$padding-small-vertical:      5px !default;
+$padding-small-horizontal:    10px !default;
+
+$padding-xs-vertical:         1px !default;
+$padding-xs-horizontal:       5px !default;
+
+$line-height-large:           1.3333333 !default; // extra decimals for Win 8.1 Chrome
+$line-height-small:           1.5 !default;
+
+$border-radius-base:          4px !default;
+$border-radius-large:         6px !default;
+$border-radius-small:         3px !default;
+
+//** Width of the `border` for generating carets that indicate dropdowns.
+$caret-width-base:            4px !default;
+//** Carets increase slightly in size for larger components.
+$caret-width-large:           5px !default;
+
+//== Forms
+//** Disabled cursor for form controls and buttons.
+$cursor-disabled:             not-allowed !default;
+
+//== Code
+$code-color:                  $dark-agora-red !default;
+$code-bg:                     #f9f2f4 !default;
+
+$kbd-color:                   $white !default;
+$kbd-bg:                      $darker-grey !default;
+
+$pre-bg:                      #f5f5f5 !default;
+$pre-color:                   $darker-grey !default;
+$pre-border-color:            $off-white !default;
+$pre-scrollable-max-height:   340px !default;

@@ -1,0 +1,8 @@
+<zia-modal #myModal [closable]="true" [contentModal]="{header: 'my header', message: 'my message'}">
+  <h1>My Modal</h1>
+  <section>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta obcaecati eos consequatur sequi accusamus aliquid voluptate
+    eaque, laboriosam ipsam distinctio quidem ad commodi est excepturi, repellat recusandae? Hic quidem, quaerat!</section>
+  <button (click)="myModal.close()">close me</button>
+</zia-modal>
+<br/>
+<button (click)="myModal.open()">open me</button>

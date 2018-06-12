@@ -1,0 +1,59 @@
+/* Basic rules on root elements */
+
+html {
+  font-size: $font-size-base;
+  -webkit-tap-highlight-color: $black;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: 1.6rem;
+  line-height: $line-height-base;
+  color: $text-color;
+  background-color: $body-bg;
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+  font-family: $font-family-sans-serif;
+  font-size: 1.6rem;
+}
+
+ul {
+  padding-left: 0; // Against browser set this value at 40px.
+}
+
+// Links
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+
+  &:focus {
+    @include tab-focus;
+  }
+}
+
+// Horizontal rules
+hr {
+  margin-top: $line-height-computed;
+  margin-bottom: $line-height-computed;
+  border: 0;
+  border-top: 1px solid $lightest-grey;
+}
+
+// iOS "clickable elements" fix for role="button"
+//
+// Fixes "clickability" issue (and more generally, the firing of events such as focus as well)
+// for traditionally non-focusable elements with role="button"
+// see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+
+[role="button"] {
+  cursor: pointer;
+}

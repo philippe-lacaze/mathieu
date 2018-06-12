@@ -1,0 +1,24 @@
+<h3>example works!</h3>
+<h3>Réponse de ExampleService</h3>
+{{exampleServiceResponse | json}}
+
+<form name="form1" novalidate>
+  <zia-form-field>
+    <label for="user">User :</label>
+    <input #user="ngModel" id="user" name="user" type="text" [(ngModel)]="exampleServiceResponse.user" required/>
+  </zia-form-field>
+  <zia-form-field>
+    <label for="dossier" ziaWording>Dossier :</label>
+    <input #dossier="ngModel" id="dossier" name="dossier" type="text" [(ngModel)]="exampleServiceResponse.dossier"
+           required/>
+  </zia-form-field>
+  <zia-form-field>
+    <label for="montant">Montant :</label>
+    <input id="montant" name="montant" type="text" [(ngModel)]="exampleServiceResponse.montant"/>
+  </zia-form-field>
+  <zia-form-field>
+    <label for="dateJour">Date du jour :</label>
+    <input id="dateJour" name="dateJour" type="text" [(ngModel)]="exampleServiceResponse.dateJour"/>
+  </zia-form-field>
+  <input type="button" (click)="submit()" value="Enregistrer"/>
+</form>

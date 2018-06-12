@@ -1,0 +1,8 @@
+<!-- CE COMPOSANT INTERNE AU SOCLE NE DOIT RIEN CONTENIR DE PLUS QUE CES 2 LIGNES -->
+<router-outlet></router-outlet>
+
+<!-- Composant singleton d'affichage centralisé des messages d'erreur technique -->
+<zia-technical-error></zia-technical-error>
+
+<!-- Composant singleton d'affichage centralisé des modales métier vias ModaleService -->
+<zia-modal [modalEvent]="modalEvent"></zia-modal>

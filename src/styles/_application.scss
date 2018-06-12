@@ -1,0 +1,91 @@
+body, div, p {
+  box-sizing: border-box;
+}
+
+app-accueil {
+  ul li {
+    margin-left: 2em;
+  }
+}
+
+app-situation-professionnelle {
+  .ajouter-btn {
+    display: block;
+    margin: 0.5em auto;
+    width: 10em;
+  }
+  .activite {
+    border: 1px dashed gray;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+app-saisie-activite {
+  h2 {
+    text-align: center;
+    background-color: $light-aqua;
+    padding: 0.3rem 0;
+  }
+}
+
+app-situation-familiale {
+  .membre {
+    margin: 1em;
+    position: relative;
+    border: 1px solid gray;
+    display: inline-block;
+    min-width: 20em;
+
+    p {
+      padding: 0 1em;
+    }
+
+    .prenom {
+      width: 100%;
+      margin-top: 0;
+      background-color: lightblue;
+    }
+
+    &.feminin {
+      .prenom {
+        background-color: lightpink;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .supprimer-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 10;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+  }
+
+  .ajouter-btn {
+    display: block;
+    margin: 0.5em auto;
+    width: 10em;
+  }
+}
+
+app-etapes {
+  .state-bar ul li {
+    display: inline-block;
+    height: 2em;
+  }
+  .state-bar-label {
+    font-size: 1.5em;
+  }
+}
+

@@ -1,0 +1,24 @@
+/* ------------------------------ ATTENTION, CSS INTERNE A STC ------------------------------------------ */
+/*                                                                                                        */
+/* Cette CSS ne fait pas partie de l'API publique socle, elle est a usage interne STC et utilisée pour    */
+/* styler à minima les pages d'exemple du socle STC.                                                      */
+/*                                                                                                        */
+/*                 Cette CSS NE DOIT PAS ËTRE UTILISEE pas les applications                               */
+/* ------------------------------ ATTENTION, CSS INTERNE A STC ------------------------------------------ */
+
+/* You can add global styles to this file, and also import other style files */
+
+// Core variables and mixins
+@import "_variables";
+@import "_mixins";
+
+// Reset and dependencies
+@import "_normalize";
+@import "_print";
+
+// Core CSS
+@import "_scaffolding";
+@import "_title";
+@import "_code";
+
+@import "_components";

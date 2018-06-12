@@ -1,0 +1,17 @@
+<zia-action-panel [actionBarConfig]="actionBarConfig"
+                  (action)="onAction($event)">
+
+  <h2>Situation familiale</h2>
+
+  <div>
+    <div *ngFor="let membre of membres" (click)="onModifierMembre(membre)" class="membre {{membre.personne.sexe}}" title="modifier {{membre.personne.prenom}}">
+      <button (click)="onSupprimerMembre(membre)" class="supprimer-btn" title="supprimer {{membre.personne.prenom}}">x</button>
+      <p class="prenom">{{membre.personne.prenom}} {{membre.personne.nom}}</p>
+      <p class="statut">{{membre.statut}}</p>
+      <p class="dateNaissance">Né le {{membre.personne.dateNaissance}}</p>
+    </div>
+  </div>
+
+  <button (click)="onAjouterMembre()" class="ajouter-btn">Ajouter un membre</button>
+
+</zia-action-panel>
